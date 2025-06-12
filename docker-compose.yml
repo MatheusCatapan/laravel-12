@@ -34,7 +34,7 @@ services:
         volumes:
             - ./.docker/mysql/dbdata:/var/lib/mysql
         ports:
-            - "3388:3306"
+            - "3306:3306"
         networks:
             - laravel
 
@@ -42,7 +42,7 @@ services:
         image: phpmyadmin/phpmyadmin
         restart: unless-stopped
         ports:
-            - "8081:80"
+            - "8080:80"
         environment:
             PMA_HOST: db
             PMA_PORT: 3306
